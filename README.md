@@ -8,6 +8,26 @@
 $ npm install --save crockpot
 ```
 
+## Usage
+The following types of numbers can be translated to one of the types below to any other:
+- decimal
+- roman numeral
+- to english only
+
+TODO:
+- from english
+- binary
+
+```js
+var convert = require('crockpot')
+
+crockpot.roman.toEnglish('IV')
+// 'four'
+
+crockpot.decimal.toEnglish(1066)
+// 'one thousand sixty-six'
+```
+
 ## Development
 To run tests follow the following instructions:
 
@@ -26,13 +46,5 @@ Alternatively you can run individual tests:
 $ mocha specs/**
 ```
 
-## Usage
-
-```js
-var convert = require('crockpot')
-
-convert.roman.toEnglish('IV')
-// 'four'
-```
 ## License
 MIT
