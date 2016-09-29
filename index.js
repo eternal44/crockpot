@@ -1,15 +1,27 @@
-var fromRoman = require('crockpot-fromRoman')
 var toEnglish = require('crockpot-toEnglish')
+var toRoman = require('crockpot-toRoman')
+var fromRoman = require('crockpot-fromRoman');
 
 var crockPot = {
   'roman': {
-    'toEnglish': function(numeral){
-      // TODO: since decimals are our proxy -- how can we keep from
-      // repeating references to code?  Look up testing assertion libraries:
-        // ex:  '.toBe.equal'
-
-      var temp = fromRoman(numeral);// converts numeral to decimal integer
-      return toEnglish(temp); // converts decimal integer to english
+    'toEnglish': function(numeral) {
+      var temp = fromRoman(numeral);
+      return toEnglish(temp);
+    },
+    'toDecimal': function(numeral) {
+      return fromRoman(numeral)
+    }
+  },
+  'decimal': {
+    'toRoman': function(num) {
+      return toRoman(num)
+    },
+    'toEnglish': function(num) {
+      var temp = toRoman(num)
+      temp =  fromRoman(temp)
+      return toEnglish(temp)
     }
   }
 }
+
+module.exports = crockPot
