@@ -12,10 +12,9 @@ $ npm install --save crockpot
 The following types of numbers can be translated to one of the types below to any other:
 - decimal
 - roman numeral
-- to english only
+- english
 
 TODO:
-- from english
 - binary
 
 ```js
