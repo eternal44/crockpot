@@ -1,6 +1,6 @@
 {
   "name": "crockpot",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Converts multiple number formats using decimal numbers as a proxy.",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,11 @@
     "url": "https://github.com/eternal44/crockpot/issues"
   },
   "homepage": "https://github.com/eternal44/crockpot#readme",
+  "dependencies": {
+    "crockpot-fromRoman": "^0.0.4",
+    "crockpot-toEnglish": "^0.0.4",
+    "crockpot-toRoman": "^0.0.2"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
@@ -32,9 +37,5 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.2",
     "mocha": "^2.4.5"
-  },
-  "peerDependencies": {
-    "crockpot-toEnglish": "0.x",
-    "crockpot-fromRoman": "0.x"
   }
 }
