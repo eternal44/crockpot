@@ -27,26 +27,35 @@ describe('decimal to roman |', function(){
   })
 });
 
-describe('decimal to roman |', function(){
+describe('roman to engish |', function(){
   testParams.numeralEnglish.forEach(function(param){
-    it('translates ' + param.numeral + ' to numeral', function(){
+    it('translates ' + param.numeral + ' to english', function(){
       expect(crockpot.roman.toEnglish(param.numeral)).to.equal(param.english);
     })
   })
 })
 
-describe('roman to engish |', function(){
+describe('english to roman |', function(){
   testParams.numeralEnglish.forEach(function(param){
-    it('translates ' + param.numeral + ' to numeral', function(){
-      expect(crockpot.roman.toEnglish(param.numeral)).to.equal(param.english);
+    console.log(param)
+    it('translates ' + param.english + ' to roman numerals', function(){
+      expect(crockpot.english.toRoman(param.english)).to.equal(param.numeral);
     })
   })
 })
 
 describe('decimal to engish |', function(){
   testParams.decimalEnglish.forEach(function(param){
-    it('translates ' + param.decimal + ' to numeral', function(){
+    it('translates ' + param.decimal + ' to english', function(){
       expect(crockpot.decimal.toEnglish(param.decimal)).to.equal(param.english);
+    })
+  })
+})
+
+describe('english to decimal', function(){
+  testParams.decimalEnglish.forEach(function(param){
+    it('translates ' + param.english + ' to decimal', function(){
+      expect(crockpot.english.toDecimal(param.english)).to.equal(param.decimal);
     })
   })
 })

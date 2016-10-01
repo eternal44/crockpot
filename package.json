@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/eternal44/crockpot#readme",
   "dependencies": {
+    "crockpot-fromEnglish": "^0.0.1",
     "crockpot-fromRoman": "^0.0.4",
     "crockpot-toEnglish": "^0.0.4",
     "crockpot-toRoman": "^0.0.2"
